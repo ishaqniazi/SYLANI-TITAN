@@ -1,0 +1,3817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Saylani TITAN | Taj Institute of Technology & Applied Networks</title>
+  <meta name="title" content="Saylani TITAN | Taj Institute of Technology & Applied Networks">
+  <meta name="description" content="A collaborative initiative between Saylani Mass IT Training (SMIT) and TAJ TITAN, empowering Pakistan's youth through world-class technology education, AI, and self-employment.">
+  <meta name="keywords" content="Saylani TITAN, SMIT, Taj TITAN, Taj Gasoline, IT training Pakistan, Saylani Zamzama, Saylani Sukkur, free IT courses, AI training, Agentic AI, Web Development">
+  <meta name="author" content="Saylani Welfare & TAJ TITAN">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.saylaniit.com/">
+  <meta property="og:title" content="Saylani TITAN | Next-Gen Technology Education & Applied Networks">
+  <meta property="og:description" content="Empowering Pakistan's youth through free, industry-focused technology education, practical skills, innovation and entrepreneurial opportunities.">
+  <meta property="og:image" content="logo.jpg">
+
+  <!-- Favicon using Official Logo -->
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Leaflet 1.9.4 CSS for Interactive Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <!-- Custom CSS Styles -->
+  <style>
+    /* ==========================================================================
+       1. ROOT VARIABLES & DESIGN TOKENS
+       ========================================================================== */
+    :root {
+      --navy-dark: #071A35;
+      --navy-deep: #040e1e;
+      --navy-surface: #0a2143;
+      --navy-card: #0d2952;
+      --navy-border: rgba(22, 198, 217, 0.18);
+      --royal-blue: #1255B8;
+      --royal-blue-hover: #0e4496;
+      --cyan-accent: #16C6D9;
+      --cyan-hover: #13b0c2;
+      --cyan-glow: rgba(22, 198, 217, 0.4);
+      --gold-accent: #F5B942;
+      --gold-hover: #dfa435;
+      --gold-glow: rgba(245, 185, 66, 0.35);
+      --bg-light: #F4F7FC;
+      --text-main: #FFFFFF;
+      --text-secondary: #CBD5E1;
+      --text-muted-custom: #94A3B8;
+      --card-radius: 16px;
+      --btn-radius: 10px;
+      --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ==========================================================================
+       2. GLOBAL RESET & BASE TYPOGRAPHY
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--navy-dark);
+      color: var(--text-secondary);
+      line-height: 1.65;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1, h2, h3, h4, h5, h6, .brand-font {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--text-main);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    a {
+      text-decoration: none;
+      transition: var(--transition-base);
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* Ambient Tech Grid Background */
+    .tech-grid-bg {
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(18, 85, 184, 0.28) 0%, transparent 60%),
+        radial-gradient(circle at 85% 30%, rgba(22, 198, 217, 0.15) 0%, transparent 40%),
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 45px 45px, 45px 45px;
+    }
+
+    .subtle-dots-bg {
+      background-image: radial-gradient(rgba(22, 198, 217, 0.12) 1.5px, transparent 1.5px);
+      background-size: 28px 28px;
+    }
+
+    /* Section Spacing */
+    .section-padding {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 65px 0;
+      }
+    }
+
+    /* Badge & Section Header Utilities */
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(22, 198, 217, 0.1);
+      border: 1px solid rgba(22, 198, 217, 0.35);
+      color: var(--cyan-accent);
+      margin-bottom: 16px;
+    }
+
+    .section-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--cyan-accent);
+      box-shadow: 0 0 10px var(--cyan-accent);
+      animation: pulse-dot 2s infinite ease-in-out;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted-custom);
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .gradient-text-cyan {
+      background: linear-gradient(135deg, #FFFFFF 0%, #16C6D9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-text-gold {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F5B942 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Buttons */
+    .btn-titan-primary {
+      background: linear-gradient(135deg, var(--royal-blue) 0%, #186bf0 100%);
+      color: #FFFFFF;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: var(--btn-radius);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 20px rgba(18, 85, 184, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition-base);
+    }
+
+    .btn-titan-primary:hover {
+      background: linear-gradient(135deg, #186bf0 0%, var(--cyan-accent) 100%);
+      color: #071A35;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(22, 198, 217, 0.5);
+    }
+
+    .btn-titan-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #FFFFFF;
+      font-weight: 600;
+      padding: 12px 26px;
+      border-radius: var(--btn-radius);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition-base);
+    }
+
+    .btn-titan-secondary:hover {
+      background: rgba(22, 198, 217, 0.15);
+      border-color: var(--cyan-accent);
+      color: var(--cyan-accent);
+      transform: translateY(-2px);
+    }
+
+    .btn-titan-gold {
+      background: linear-gradient(135deg, var(--gold-accent) 0%, #ffc85a 100%);
+      color: #071A35;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: var(--btn-radius);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 6px 20px rgba(245, 185, 66, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition-base);
+    }
+
+    .btn-titan-gold:hover {
+      background: #FFFFFF;
+      color: #071A35;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Cards */
+    .titan-card {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--card-radius);
+      padding: 28px;
+      transition: var(--transition-base);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .titan-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(22, 198, 217, 0.45);
+      box-shadow: 0 15px 35px rgba(4, 14, 30, 0.6);
+    }
+
+    /* ==========================================================================
+       3. NAVIGATION BAR
+       ========================================================================== */
+    .titan-navbar {
+      background-color: rgba(7, 26, 53, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.35s ease;
+      z-index: 1040;
+      padding: 12px 0;
+    }
+
+    .titan-navbar.scrolled {
+      background-color: rgba(4, 14, 30, 0.95);
+      border-bottom: 1px solid rgba(22, 198, 217, 0.25);
+      padding: 8px 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .navbar-logo-img {
+      height: 48px;
+      width: 48px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid var(--gold-accent);
+      background: #FFFFFF;
+      box-shadow: 0 0 15px rgba(245, 185, 66, 0.3);
+      transition: var(--transition-base);
+    }
+
+    .navbar-brand:hover .navbar-logo-img {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--cyan-accent);
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      line-height: 1.1;
+      display: block;
+    }
+
+    .brand-subtitle {
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cyan-accent);
+      display: block;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      color: var(--text-secondary) !important;
+      font-weight: 500;
+      font-size: 0.93rem;
+      padding: 8px 14px !important;
+      position: relative;
+      transition: var(--transition-base);
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--cyan-accent) !important;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 14px;
+      right: 14px;
+      height: 2px;
+      background: var(--cyan-accent);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    .navbar-toggler {
+      border: 1px solid rgba(22, 198, 217, 0.4);
+      color: var(--cyan-accent);
+      padding: 6px 12px;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: 0 0 10px var(--cyan-accent);
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 130px;
+      padding-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-glow-1 {
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(18, 85, 184, 0.35) 0%, transparent 70%);
+      filter: blur(80px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-glow-2 {
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(22, 198, 217, 0.22) 0%, transparent 70%);
+      filter: blur(90px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-headline {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .hero-lead {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 620px;
+    }
+
+    /* Terminal Widget Inspired by User Reference Image */
+    .terminal-window {
+      background: #06152b;
+      border: 1px solid rgba(22, 198, 217, 0.35);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(22, 198, 217, 0.15);
+      position: relative;
+      z-index: 2;
+      transition: var(--transition-base);
+    }
+
+    .terminal-window:hover {
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 50px rgba(22, 198, 217, 0.25);
+    }
+
+    .terminal-header {
+      background: #040e1e;
+      padding: 12px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .terminal-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+
+    .terminal-dot.red { background-color: #ff5f56; }
+    .terminal-dot.yellow { background-color: #ffbd2e; }
+    .terminal-dot.green { background-color: #27c93f; }
+
+    .terminal-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--cyan-accent);
+      font-weight: 500;
+    }
+
+    .terminal-body {
+      padding: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: #E2E8F0;
+      background: rgba(6, 21, 43, 0.95);
+      overflow-x: auto;
+    }
+
+    .token-keyword { color: #f472b6; font-weight: 600; }
+    .token-string { color: #34d399; }
+    .token-function { color: #60a5fa; }
+    .token-comment { color: #64748b; font-style: italic; }
+    .token-variable { color: var(--cyan-accent); }
+    .token-gold { color: var(--gold-accent); }
+
+    .terminal-status-pill {
+      background: rgba(22, 198, 217, 0.15);
+      border: 1px solid var(--cyan-accent);
+      border-radius: 30px;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    /* Floating Badges */
+    .hero-floating-card {
+      position: absolute;
+      background: rgba(7, 26, 53, 0.9);
+      border: 1px solid rgba(245, 185, 66, 0.4);
+      padding: 12px 18px;
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: float-slow 4s ease-in-out infinite;
+    }
+
+    .hero-floating-card.top-left {
+      top: -20px;
+      left: -20px;
+    }
+
+    .hero-floating-card.bottom-right {
+      bottom: -20px;
+      right: -15px;
+      animation-delay: 2s;
+      border-color: rgba(22, 198, 217, 0.4);
+    }
+
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    /* Tech Stack Ticker (Modeled after Reference Image) */
+    .ticker-wrapper {
+      width: 100%;
+      overflow: hidden;
+      background: rgba(4, 14, 30, 0.7);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 16px 0;
+      position: relative;
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-ticker 35s linear infinite;
+    }
+
+    .ticker-track:hover {
+      animation-play-state: paused;
+    }
+
+    .ticker-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50px;
+      padding: 6px 18px;
+      margin: 0 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #E2E8F0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: var(--transition-base);
+    }
+
+    .ticker-pill:hover {
+      background: rgba(22, 198, 217, 0.15);
+      border-color: var(--cyan-accent);
+      color: var(--cyan-accent);
+    }
+
+    @keyframes scroll-ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ==========================================================================
+       5. ABOUT SECTION
+       ========================================================================== */
+    .about-partner-card {
+      background: rgba(10, 33, 67, 0.6);
+      border: 1px solid var(--navy-border);
+      border-radius: 14px;
+      padding: 24px;
+      height: 100%;
+      transition: var(--transition-base);
+    }
+
+    .about-partner-card:hover {
+      border-color: var(--gold-accent);
+      background: rgba(13, 41, 82, 0.9);
+      transform: translateY(-3px);
+    }
+
+    .partner-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+    }
+
+    .about-visual-frame {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(22, 198, 217, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-visual-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .about-visual-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .about-badge-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(7, 26, 53, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ==========================================================================
+       6. IMPACT & ACHIEVEMENTS SECTION (STATISTICS)
+       ========================================================================== */
+    .stats-card {
+      background: linear-gradient(180deg, rgba(13, 41, 82, 0.7) 0%, rgba(7, 26, 53, 0.9) 100%);
+      border: 1px solid rgba(22, 198, 217, 0.2);
+      border-radius: var(--card-radius);
+      padding: 35px 25px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-base);
+    }
+
+    .stats-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--royal-blue), var(--cyan-accent));
+      opacity: 0.7;
+    }
+
+    .stats-card.gold-card::before {
+      background: linear-gradient(90deg, var(--gold-accent), #fff1b8);
+    }
+
+    .stats-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--cyan-accent);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(22, 198, 217, 0.2);
+    }
+
+    .stats-number {
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 10px;
+      color: #FFFFFF;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .stats-label {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #E2E8F0;
+      margin-bottom: 6px;
+    }
+
+    .stats-source {
+      font-size: 0.75rem;
+      color: var(--cyan-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       7. COURSES & TRAINING PROGRAMS SECTION
+       ========================================================================== */
+    .filter-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 35px;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-secondary);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition-base);
+      cursor: pointer;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--royal-blue);
+      border-color: var(--cyan-accent);
+      color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(18, 85, 184, 0.5);
+    }
+
+    .search-input-wrapper {
+      max-width: 480px;
+      margin: 0 auto 35px auto;
+      position: relative;
+    }
+
+    .search-input {
+      background: rgba(10, 33, 67, 0.8);
+      border: 1px solid rgba(22, 198, 217, 0.3);
+      border-radius: 50px;
+      padding: 12px 24px 12px 48px;
+      color: #FFFFFF;
+      width: 100%;
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition-base);
+    }
+
+    .search-input:focus {
+      border-color: var(--cyan-accent);
+      box-shadow: 0 0 20px rgba(22, 198, 217, 0.3);
+      background: rgba(13, 41, 82, 0.95);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--cyan-accent);
+      font-size: 1.1rem;
+    }
+
+    .course-card {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--card-radius);
+      padding: 26px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-base);
+      position: relative;
+    }
+
+    .course-card:hover {
+      border-color: var(--cyan-accent);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(22, 198, 217, 0.15);
+    }
+
+    .course-category-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .tag-dev { background: rgba(18, 85, 184, 0.25); color: #60a5fa; border: 1px solid rgba(96, 165, 250, 0.4); }
+    .tag-ai { background: rgba(22, 198, 217, 0.2); color: var(--cyan-accent); border: 1px solid rgba(22, 198, 217, 0.4); }
+    .tag-design { background: rgba(245, 185, 66, 0.2); color: var(--gold-accent); border: 1px solid rgba(245, 185, 66, 0.4); }
+    .tag-cyber { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+    .tag-vocational { background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4); }
+
+    .course-title {
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+
+    .course-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted-custom);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .course-meta {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+
+    .course-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .btn-course-details {
+      flex: 1;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      text-align: center;
+      transition: var(--transition-base);
+    }
+
+    .btn-course-details:hover {
+      background: rgba(255, 255, 255, 0.18);
+      color: #FFFFFF;
+    }
+
+    .btn-course-apply {
+      flex: 1;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      border-radius: 8px;
+      background: var(--royal-blue);
+      color: #FFFFFF;
+      border: 1px solid rgba(22, 198, 217, 0.3);
+      text-align: center;
+      transition: var(--transition-base);
+    }
+
+    .btn-course-apply:hover {
+      background: var(--cyan-accent);
+      color: #071A35;
+      border-color: var(--cyan-accent);
+    }
+
+    /* ==========================================================================
+       8. STUDENT SUCCESS STORIES
+       ========================================================================== */
+    .featured-story-card {
+      background: linear-gradient(135deg, rgba(13, 41, 82, 0.8) 0%, rgba(7, 26, 53, 0.95) 100%);
+      border: 1px solid rgba(245, 185, 66, 0.35);
+      border-radius: 20px;
+      padding: 35px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--gold-accent);
+      color: #071A35;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .student-avatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      border: 3px solid var(--cyan-accent);
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(22, 198, 217, 0.4);
+    }
+
+    .story-card {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--card-radius);
+      padding: 26px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-base);
+    }
+
+    .story-card:hover {
+      border-color: var(--cyan-accent);
+      transform: translateY(-5px);
+    }
+
+    .quote-icon {
+      font-size: 1.8rem;
+      color: rgba(22, 198, 217, 0.35);
+      margin-bottom: 10px;
+    }
+
+    /* ==========================================================================
+       9. CAMPUS LOCATIONS — INTERACTIVE MAP & CARDS
+       ========================================================================== */
+    .map-container-wrapper {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid rgba(22, 198, 217, 0.3);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+      position: relative;
+    }
+
+    /* Google Map Visual Layout */
+    .google-map-visual {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      overflow: hidden;
+      background: #040e1e;
+      border-radius: 18px;
+    }
+
+    .google-map-img-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      filter: brightness(0.9) contrast(1.1);
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gmap-search-bar {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 9px 18px;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .gmap-watermark {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      z-index: 100;
+      background: rgba(7, 26, 53, 0.88);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid rgba(22, 198, 217, 0.3);
+      font-size: 0.78rem;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .gmap-zoom-controls {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .gmap-zoom-btn {
+      width: 38px;
+      height: 38px;
+      background: rgba(7, 26, 53, 0.9);
+      color: #FFFFFF;
+      border: 1px solid rgba(22, 198, 217, 0.4);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      transition: var(--transition-base);
+    }
+
+    .gmap-zoom-btn:hover {
+      background: var(--royal-blue);
+      color: #FFFFFF;
+      border-color: var(--cyan-accent);
+    }
+
+    /* Map Location Marker on Visual Map */
+    .map-visual-marker {
+      position: absolute;
+      z-index: 120;
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .map-visual-marker:hover, .map-visual-marker.highlighted {
+      transform: translate(-50%, -108%) scale(1.06);
+      z-index: 140;
+    }
+
+    .marker-pin-header {
+      background: #ea4335;
+      color: #FFFFFF;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 6px 16px rgba(234, 67, 53, 0.6);
+      border: 2px solid #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-base);
+    }
+
+    .marker-pin-header.gold {
+      background: #f59e0b;
+      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.6);
+    }
+
+    .marker-pin-arrow {
+      width: 12px;
+      height: 12px;
+      background: #ea4335;
+      transform: rotate(45deg);
+      margin: -6px auto 0 auto;
+      border-right: 2px solid #FFFFFF;
+      border-bottom: 2px solid #FFFFFF;
+    }
+
+    .marker-pin-arrow.gold {
+      background: #f59e0b;
+    }
+
+    .marker-pin-ripple {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(234, 67, 53, 0.5);
+      margin: 2px auto 0 auto;
+      animation: marker-ripple-wave 2s infinite ease-out;
+    }
+
+    .marker-pin-ripple.gold {
+      background: rgba(245, 158, 11, 0.5);
+    }
+
+    @keyframes marker-ripple-wave {
+      0% { transform: scale(0.5); opacity: 1; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+
+    .marker-info-popup {
+      position: absolute;
+      bottom: calc(100% + 14px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(7, 26, 53, 0.96);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--cyan-accent);
+      border-radius: 14px;
+      padding: 16px;
+      width: 280px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+      z-index: 150;
+      display: block;
+      color: #FFFFFF;
+      text-align: left;
+      animation: fadeInPopup 0.3s ease;
+    }
+
+    @keyframes fadeInPopup {
+      from { opacity: 0; transform: translate(-50%, 8px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
+    }
+
+    @media (max-width: 768px) {
+      .google-map-visual {
+        height: 400px;
+      }
+      .marker-info-popup {
+        width: 230px;
+        padding: 12px;
+      }
+    }
+
+    .popup-btn {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: var(--cyan-accent);
+      color: #071A35;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+    }
+
+    .popup-btn:hover {
+      background: #FFFFFF;
+      color: #071A35;
+    }
+
+    /* Campus Cards Below Map */
+    .campus-card {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      transition: var(--transition-base);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .campus-card:hover {
+      border-color: var(--cyan-accent);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .campus-img-header {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .campus-img-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .campus-card:hover .campus-img-header img {
+      transform: scale(1.08);
+    }
+
+    .campus-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(7, 26, 53, 0.88);
+      backdrop-filter: blur(8px);
+      color: var(--cyan-accent);
+      border: 1px solid var(--cyan-accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 30px;
+    }
+
+    .campus-card-body {
+      padding: 26px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ==========================================================================
+       10. ADMISSIONS SECTION
+       ========================================================================== */
+    .admissions-box {
+      background: radial-gradient(circle at 100% 0%, rgba(22, 198, 217, 0.12) 0%, transparent 50%),
+                  radial-gradient(circle at 0% 100%, rgba(18, 85, 184, 0.18) 0%, transparent 50%),
+                  var(--navy-card);
+      border: 1px solid rgba(22, 198, 217, 0.35);
+      border-radius: 24px;
+      padding: 50px 40px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 576px) {
+      .admissions-box {
+        padding: 30px 20px;
+      }
+    }
+
+    .step-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--gold-accent);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .step-card {
+      background: rgba(7, 26, 53, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 24px;
+      height: 100%;
+      transition: var(--transition-base);
+    }
+
+    .step-card:hover {
+      border-color: var(--cyan-accent);
+      background: rgba(10, 33, 67, 0.9);
+      transform: translateY(-4px);
+    }
+
+    /* ==========================================================================
+       11. GALLERY SECTION & LIGHTBOX
+       ========================================================================== */
+    .gallery-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      height: 250px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7, 26, 53, 0.92) 0%, rgba(7, 26, 53, 0.2) 60%, transparent 100%);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-zoom-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--cyan-accent);
+      color: #071A35;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    /* Custom Lightbox Modal */
+    .lightbox-modal .modal-content {
+      background: rgba(7, 26, 53, 0.96);
+      border: 1px solid var(--cyan-accent);
+      border-radius: 16px;
+      backdrop-filter: blur(16px);
+    }
+
+    .lightbox-modal .modal-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .lightbox-modal .btn-close {
+      filter: invert(1);
+    }
+
+    /* ==========================================================================
+       12. WHY CHOOSE SAYLANI TITAN (ICON CARDS)
+       ========================================================================== */
+    .feature-card {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--card-radius);
+      padding: 30px 24px;
+      height: 100%;
+      transition: var(--transition-base);
+      position: relative;
+    }
+
+    .feature-card:hover {
+      border-color: var(--cyan-accent);
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .feature-icon-wrapper {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: rgba(22, 198, 217, 0.12);
+      border: 1px solid rgba(22, 198, 217, 0.3);
+      color: var(--cyan-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      transition: var(--transition-base);
+    }
+
+    .feature-card:hover .feature-icon-wrapper {
+      background: var(--cyan-accent);
+      color: #071A35;
+      box-shadow: 0 0 20px var(--cyan-accent);
+    }
+
+    /* ==========================================================================
+       13. CONTACT & SOCIAL MEDIA SECTION
+       ========================================================================== */
+    .contact-info-card {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--card-radius);
+      padding: 30px;
+      margin-bottom: 24px;
+    }
+
+    .contact-form-card {
+      background: var(--navy-card);
+      border: 1px solid rgba(22, 198, 217, 0.3);
+      border-radius: var(--card-radius);
+      padding: 38px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-control-titan {
+      background: rgba(4, 14, 30, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      color: #FFFFFF;
+      padding: 12px 16px;
+      font-size: 0.92rem;
+      transition: var(--transition-base);
+    }
+
+    .form-control-titan:focus {
+      background: rgba(7, 26, 53, 0.95);
+      border-color: var(--cyan-accent);
+      box-shadow: 0 0 15px rgba(22, 198, 217, 0.3);
+      color: #FFFFFF;
+      outline: none;
+    }
+
+    .social-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      margin-right: 8px;
+      transition: var(--transition-base);
+    }
+
+    .social-btn:hover {
+      background: var(--cyan-accent);
+      color: #071A35;
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px var(--cyan-accent);
+    }
+
+    /* ==========================================================================
+       14. FOOTER
+       ========================================================================== */
+    .titan-footer {
+      background-color: var(--navy-deep);
+      border-top: 1px solid rgba(22, 198, 217, 0.2);
+      padding: 80px 0 35px 0;
+      position: relative;
+    }
+
+    .footer-logo-img {
+      height: 54px;
+      width: 54px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid var(--gold-accent);
+      background: #FFFFFF;
+      margin-bottom: 18px;
+    }
+
+    .footer-heading {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background: var(--cyan-accent);
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      transition: var(--transition-base);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-links a:hover {
+      color: var(--cyan-accent);
+      transform: translateX(4px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 60px;
+      padding-top: 25px;
+      font-size: 0.84rem;
+      color: var(--text-muted-custom);
+    }
+
+    /* Back-to-Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--royal-blue);
+      border: 1px solid var(--cyan-accent);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transition-base);
+      z-index: 1030;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--cyan-accent);
+      color: #071A35;
+      box-shadow: 0 0 20px var(--cyan-accent);
+    }
+
+    /* Scroll Reveal Initial State */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Respect reduced-motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       1. STICKY NAVIGATION BAR
+       ========================================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top titan-navbar" id="mainNavbar">
+      <div class="container">
+        <!-- Logo & Brand identity -->
+        <a class="navbar-brand navbar-brand-wrapper" href="#home" title="Saylani TITAN Home">
+          <img src="logo.jpg" alt="Saylani TITAN Official Logo" class="navbar-logo-img">
+          <div>
+            <span class="brand-title">SAYLANI TITAN</span>
+            <span class="brand-subtitle">SMIT × TAJ TITAN INITIATIVE</span>
+          </div>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#titanNavbarContent" aria-controls="titanNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="titanNavbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About TITAN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#impact">Impact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#programs">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#stories">Success Stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#campuses">Campuses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#admissions">Admissions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn btn-titan-gold py-2 px-3 fs-6">
+                <i class="bi bi-mortarboard-fill"></i> Apply Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+  <section id="home" class="hero-section tech-grid-bg">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+
+    <div class="container hero-content">
+      <div class="row align-items-center g-5">
+        <!-- Hero Text Column -->
+        <div class="col-lg-7">
+          <div class="section-badge mb-3">
+            <span class="dot"></span> SAYLANI TITAN • A Partnership for a Smarter Digital Future
+          </div>
+          
+          <h1 class="hero-headline">
+            BUILD YOUR FUTURE.<br>
+            <span class="gradient-text-cyan">SHAPE THE DIGITAL WORLD.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Empowering Pakistan's youth through industry-focused technology education, practical skills, innovation and entrepreneurial opportunities. A collaborative initiative by <strong>Saylani Mass IT Training (SMIT)</strong> and <strong>TAJ TITAN</strong>.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#programs" class="btn-titan-primary">
+              <i class="bi bi-compass"></i> Explore Programs
+            </a>
+            <a href="#campuses" class="btn-titan-secondary">
+              <i class="bi bi-geo-alt-fill text-cyan"></i> Explore Our Campuses
+            </a>
+          </div>
+
+          <!-- Social Proof / Enrolment stats inspired by reference image -->
+          <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-25">
+            <div class="d-flex">
+              <span class="badge rounded-circle bg-primary p-2 me-n2 border border-2 border-dark">AI</span>
+              <span class="badge rounded-circle bg-info p-2 me-n2 border border-2 border-dark text-dark">DEV</span>
+              <span class="badge rounded-circle bg-warning p-2 me-n2 border border-2 border-dark text-dark">SEC</span>
+              <span class="badge rounded-circle bg-success p-2 border border-2 border-dark">UI</span>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-1 text-warning fs-6">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <span class="text-white fw-bold ms-1">4.9/5</span>
+              </div>
+              <small class="text-muted-custom">Over 800+ community alumni reviews & ratings</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Live Code Terminal Widget (Modeled from Reference Picture) -->
+        <div class="col-lg-5">
+          <div class="position-relative">
+            <!-- Floating Verified Badge Top Left -->
+            <div class="hero-floating-card top-left d-none d-sm-flex">
+              <div class="rounded-circle bg-success p-2 text-white d-flex align-items-center justify-content-center" style="width:36px; height:36px;">
+                <i class="bi bi-patch-check-fill fs-5"></i>
+              </div>
+              <div>
+                <span class="d-block fw-bold text-white small">SMIT × TAJ TITAN</span>
+                <span class="d-block text-warning extra-small" style="font-size:0.75rem;">100% Free Merit Tech Programs</span>
+              </div>
+            </div>
+
+            <!-- Terminal Component -->
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <div class="terminal-dot red"></div>
+                  <div class="terminal-dot yellow"></div>
+                  <div class="terminal-dot green"></div>
+                </div>
+                <div class="terminal-title">
+                  <i class="bi bi-terminal me-1"></i> titan-agent.ts
+                </div>
+                <div class="text-secondary extra-small font-mono" style="font-size:0.75rem;">v2.5.0</div>
+              </div>
+              <div class="terminal-body">
+                <p class="mb-2">
+                  <span class="token-keyword">import</span> { <span class="token-function">TitanAgent</span>, <span class="token-function">Track</span> } <span class="token-keyword">from</span> <span class="token-string">'@titan-institute/core'</span>;
+                </p>
+                <p class="mb-2">
+                  <span class="token-comment">// Collaborative Initiative: SMIT × TAJ TITAN</span><br>
+                  <span class="token-keyword">const</span> <span class="token-variable">futureBuilder</span> = <span class="token-keyword">new</span> <span class="token-function">TitanAgent</span>({<br>
+                  &nbsp;&nbsp;campus: [<span class="token-string">'Karachi Zamzama'</span>, <span class="token-string">'Sukkur IT Park'</span>],<br>
+                  &nbsp;&nbsp;focus: [<span class="token-string">'Generative AI'</span>, <span class="token-string">'Full-Stack'</span>, <span class="token-string">'CyberOps'</span>],<br>
+                  &nbsp;&nbsp;mentorship: <span class="token-keyword">true</span>,<br>
+                  &nbsp;&nbsp;careerSupport: <span class="token-string">'Until Employed or Earning'</span><br>
+                  });
+                </p>
+                <p class="mb-2">
+                  <span class="token-keyword">await</span> <span class="token-variable">futureBuilder</span>.<span class="token-function">empowerYouth</span>();<br>
+                  <span class="token-comment">// ✓ 970 Graduated students certified</span><br>
+                  <span class="token-comment">// ✓ PKR 75,000 Avg. Monthly Earnings</span>
+                </p>
+
+                <div class="terminal-status-pill">
+                  <span class="pulse-pin" style="width:10px; height:10px;"></span>
+                  <span>AI Agent running... task completed in 1.4s</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badge Bottom Right -->
+            <div class="hero-floating-card bottom-right d-none d-sm-flex">
+              <i class="bi bi-mortarboard-fill text-cyan fs-3"></i>
+              <div>
+                <span class="d-block fw-bold text-white small">Admissions Open</span>
+                <span class="d-block text-secondary extra-small" style="font-size:0.75rem;">New Batches Starting Soon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TECH STACK TICKER MARQUEE (Inspired by Reference Image 2)
+       ========================================================================== -->
+  <div class="ticker-wrapper" aria-hidden="true">
+    <div class="ticker-track">
+      <!-- First set of pills -->
+      <div class="ticker-pill"><i class="bi bi-cpu-fill text-cyan"></i> Agentic AI</div>
+      <div class="ticker-pill"><i class="bi bi-filetype-py text-warning"></i> Python 3.12</div>
+      <div class="ticker-pill"><i class="bi bi-code-slash text-info"></i> React & Next.js</div>
+      <div class="ticker-pill"><i class="bi bi-shield-lock-fill text-danger"></i> Kali Linux & SOC</div>
+      <div class="ticker-pill"><i class="bi bi-robot text-success"></i> Generative AI & LLMs</div>
+      <div class="ticker-pill"><i class="bi bi-link-45deg text-warning"></i> Blockchain & Web3</div>
+      <div class="ticker-pill"><i class="bi bi-database-fill text-info"></i> PostgreSQL & Mongo</div>
+      <div class="ticker-pill"><i class="bi bi-palette-fill text-primary"></i> UI/UX with AI</div>
+      <div class="ticker-pill"><i class="bi bi-gear-wide-connected text-cyan"></i> Odoo ERP</div>
+      <div class="ticker-pill"><i class="bi bi-diagram-3-fill text-light"></i> LangChain & n8n</div>
+      <div class="ticker-pill"><i class="bi bi-broadcast text-warning"></i> Cisco Networking</div>
+      <div class="ticker-pill"><i class="bi bi-lightning-charge-fill text-warning"></i> Cloud Computing</div>
+
+      <!-- Duplicate set for seamless continuous loop -->
+      <div class="ticker-pill"><i class="bi bi-cpu-fill text-cyan"></i> Agentic AI</div>
+      <div class="ticker-pill"><i class="bi bi-filetype-py text-warning"></i> Python 3.12</div>
+      <div class="ticker-pill"><i class="bi bi-code-slash text-info"></i> React & Next.js</div>
+      <div class="ticker-pill"><i class="bi bi-shield-lock-fill text-danger"></i> Kali Linux & SOC</div>
+      <div class="ticker-pill"><i class="bi bi-robot text-success"></i> Generative AI & LLMs</div>
+      <div class="ticker-pill"><i class="bi bi-link-45deg text-warning"></i> Blockchain & Web3</div>
+      <div class="ticker-pill"><i class="bi bi-database-fill text-info"></i> PostgreSQL & Mongo</div>
+      <div class="ticker-pill"><i class="bi bi-palette-fill text-primary"></i> UI/UX with AI</div>
+      <div class="ticker-pill"><i class="bi bi-gear-wide-connected text-cyan"></i> Odoo ERP</div>
+      <div class="ticker-pill"><i class="bi bi-diagram-3-fill text-light"></i> LangChain & n8n</div>
+      <div class="ticker-pill"><i class="bi bi-broadcast text-warning"></i> Cisco Networking</div>
+      <div class="ticker-pill"><i class="bi bi-lightning-charge-fill text-warning"></i> Cloud Computing</div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       3. ABOUT SAYLANI TITAN SECTION
+       ========================================================================== -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-badge">
+          <span class="dot"></span> Institutional Partnership
+        </div>
+        <h2 class="section-title">A Visionary Alliance for Digital Excellence</h2>
+        <p class="section-subtitle">
+          Saylani TITAN brings together Pakistan's premier welfare-driven technical training power with corporate innovation to cultivate the next generation of global tech leaders.
+        </p>
+      </div>
+
+      <div class="row align-items-center g-5 mb-5">
+        <!-- Left: Narrative & Core Pillars -->
+        <div class="col-lg-6 reveal">
+          <h3 class="h2 mb-3 gradient-text-cyan">Bridging The Global Digital Skills Gap</h3>
+          <p class="text-secondary mb-4">
+            <strong>Saylani TITAN</strong> is an impactful collaboration between <strong>Saylani Mass IT Training (SMIT)</strong>, an arm of Saylani Welfare International Trust founded by Hazrat Maulana Muhammad Bashir Farooq Qadri, and <strong>TAJ TITAN</strong> (Taj Institute of Technology & Applied Networks), founded by Taj Gasoline.
+          </p>
+          <p class="text-secondary mb-4">
+            Rather than relying on outdated academic models, this joint initiative delivers 100% accessible, tuition-free, cutting-edge technical education directly synchronized with international market demands. Through rigorous bootcamps, hands-on lab environments, and expert mentorship, we empower underprivileged and ambitious youth across Karachi and Sukkur to transform into skilled digital creators, self-employed freelancers, and high-earning software professionals.
+          </p>
+
+          <!-- Core Partnership Pillars -->
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="about-partner-card">
+                <div class="partner-icon-box bg-primary bg-opacity-25 text-info">
+                  <i class="bi bi-heart-pulse-fill"></i>
+                </div>
+                <h4 class="h5 text-white mb-2">Saylani Welfare (SMIT)</h4>
+                <p class="small text-muted-custom mb-0">
+                  Global benchmark in mass technical education with hundreds of thousands trained across Pakistan.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="about-partner-card">
+                <div class="partner-icon-box bg-warning bg-opacity-25 text-warning">
+                  <i class="bi bi-buildings-fill"></i>
+                </div>
+                <h4 class="h5 text-white mb-2">TAJ TITAN (Taj Gasoline)</h4>
+                <p class="small text-muted-custom mb-0">
+                  Strategic socio-economic empowerment initiative providing state-of-the-art infrastructure & seed funding.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real Visual Showcase -->
+        <div class="col-lg-6 reveal">
+          <div class="about-visual-frame mb-4">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Saylani TITAN Digital Platform - Interactive AI & Coding Environment" class="img-fluid" onerror="this.onerror=null; this.src='WhatsApp Image 2026-11-07 at 11.55.07 PM.jpeg';">
+            <div class="about-badge-overlay">
+              <div>
+                <span class="d-block text-white fw-bold">TITAN Digital Platform</span>
+                <span class="small text-cyan">Live Interactive AI & Coding Curriculum</span>
+              </div>
+              <span class="badge bg-primary text-white px-3 py-2">ESTD. 2025</span>
+            </div>
+          </div>
+
+          <!-- Key Objectives List -->
+          <div class="titan-card py-3 px-4">
+            <div class="row text-center text-md-start g-3 align-items-center">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                  <span class="text-white small fw-semibold">Zero Tuition Barrier</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                  <span class="text-white small fw-semibold">100% Practical Labs</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                  <span class="text-white small fw-semibold">Seed Funding Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. IMPACT AND ACHIEVEMENTS SECTION (Animated Statistics)
+       ========================================================================== -->
+  <section id="impact" class="section-padding bg-navy-surface subtle-dots-bg" style="background-color: var(--navy-surface);">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-badge">
+          <span class="dot"></span> Verified Impact Metrics
+        </div>
+        <h2 class="section-title">Measurable Results. Tangible Prosperity.</h2>
+        <p class="section-subtitle">
+          Real numbers reflecting the transformation of ambitious minds into digital champions. All highlighted figures reflect official disclosures published by Taj TITAN and Saylani IT.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Stat 1: 970 Graduated Students (Taj TITAN Official) -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="stats-card">
+            <div class="stats-number gradient-text-cyan counter" data-target="970" data-suffix="+">0</div>
+            <div class="stats-label">Graduated Students</div>
+            <p class="small text-muted-custom mb-3">Empowered with future-proof tech & digital enterprise capabilities.</p>
+            <div class="stats-source"><i class="bi bi-shield-check me-1"></i> Published by Taj TITAN</div>
+          </div>
+        </div>
+
+        <!-- Stat 2: PKR 75,000 Average Monthly Earnings (Taj TITAN Official) -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="stats-card gold-card">
+            <div class="stats-number gradient-text-gold counter" data-target="75000" data-prefix="PKR " data-format="comma">0</div>
+            <div class="stats-label">Avg. Monthly Earnings</div>
+            <p class="small text-muted-custom mb-3">Average earnings achieved by graduates through freelancing & careers.</p>
+            <div class="stats-source"><i class="bi bi-patch-check me-1"></i> Published by Taj TITAN</div>
+          </div>
+        </div>
+
+        <!-- Stat 3: 80%+ Placement & Freelancing Rate (Saylani IT Official) -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="stats-card">
+            <div class="stats-number gradient-text-cyan counter" data-target="80" data-suffix="%+">0</div>
+            <div class="stats-label">Employment Rate</div>
+            <p class="small text-muted-custom mb-3">High-rate graduate absorption into international remote & local tech jobs.</p>
+            <div class="stats-source"><i class="bi bi-check2-circle me-1"></i> Saylani IT Training Network</div>
+          </div>
+        </div>
+
+        <!-- Stat 4: 2 Flagship Campuses (Karachi & Sukkur) -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="stats-card">
+            <div class="stats-number gradient-text-cyan counter" data-target="2" data-suffix=" Hubs">0</div>
+            <div class="stats-label">Active Campuses</div>
+            <p class="small text-muted-custom mb-3">State-of-the-art facilities in Karachi (Zamzama) and Sukkur (IT Park).</p>
+            <div class="stats-source"><i class="bi bi-geo-alt me-1"></i> Verified Locations</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Context Disclaimer Note -->
+      <div class="text-center mt-4">
+        <small class="text-muted-custom">
+          * Figures above represent verifiable published metrics from official Taj TITAN reports and Saylani Mass IT Training disclosures.
+        </small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. COURSES AND TRAINING PROGRAMS SECTION
+       ========================================================================== -->
+  <section id="programs" class="section-padding tech-grid-bg">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-badge">
+          <span class="dot"></span> Industry-Aligned Curriculum
+        </div>
+        <h2 class="section-title">Pick the Skill. We Will Get You Earning With It.</h2>
+        <p class="section-subtitle">
+          Comprehensive, project-driven training programs designed to equip you with portfolio-grade skills for immediate industry employment, remote client delivery, or tech entrepreneurship.
+        </p>
+      </div>
+
+      <!-- Search Input -->
+      <div class="search-input-wrapper reveal">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text" id="courseSearch" class="search-input" placeholder="Search programs by title or skill (e.g. AI, Python, React, Cyber)..." aria-label="Search Courses">
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-btn-group reveal">
+        <button class="filter-btn active" data-filter="all">All Tracks (<span id="allCount">25</span>)</button>
+        <button class="filter-btn" data-filter="dev">Development (6)</button>
+        <button class="filter-btn" data-filter="ai">AI & Data Science (4)</button>
+        <button class="filter-btn" data-filter="design">Design & Media (5)</button>
+        <button class="filter-btn" data-filter="cyber">Cybersecurity & Networking (4)</button>
+        <button class="filter-btn" data-filter="vocational">Vocational & Professional (6)</button>
+      </div>
+
+      <!-- Courses Grid -->
+      <div class="row g-4" id="coursesGrid">
+
+        <!-- ==================== CATEGORY: DEVELOPMENT ==================== -->
+        <!-- Course 1 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="dev" data-keywords="web development html css javascript react nextjs fullstack mern">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-dev">Development</span>
+              <h3 class="course-title">Modern Web & Application Development</h3>
+              <p class="course-desc">
+                Master modern full-stack engineering with HTML5, modern JavaScript (ES6+), React.js, Next.js, Node.js, and cloud deployments.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Modern Web & Application Development', 'Development', 'Full-Stack Web (MERN & Next.js)', 'HTML5, CSS3, JavaScript ES6+, React, Node.js, Express, MongoDB, Next.js, Git, Deployment', 'Hands-on project work, portfolio building, and client readiness.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="dev" data-keywords="artificial intelligence bootcamp ai machine learning deep learning neural networks">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-dev">Development</span>
+              <h3 class="course-title">Artificial Intelligence Bootcamp</h3>
+              <p class="course-desc">
+                Intensive foundational and applied bootcamp covering machine learning algorithms, deep neural nets, and intelligent system architectures.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Artificial Intelligence Bootcamp', 'Development', 'Intensive AI Programming', 'Python, NumPy, Pandas, Scikit-Learn, PyTorch, Model Optimization, Computer Vision basics', 'End-to-end predictive models and computer vision pipelines.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="dev" data-keywords="agentic ai agents langchain autogen automation autonomous llm">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-dev">Development</span>
+              <h3 class="course-title">Agentic AI</h3>
+              <p class="course-desc">
+                Architect and deploy autonomous AI agents capable of reasoning, calling APIs, browsing networks, and executing multi-step tasks.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Agentic AI', 'Development', 'Next-Gen Autonomous Agents', 'LLM orchestration, LangChain, LangGraph, CrewAI, Tool Calling, Vector Stores, Multi-agent workflows', 'Autonomous customer support agents and complex workflow orchestrators.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="dev" data-keywords="blockchain technology web3 smart contracts solidity crypto ethereum">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-dev">Development</span>
+              <h3 class="course-title">Blockchain Technology</h3>
+              <p class="course-desc">
+                Build decentralized applications (dApps), smart contracts, and token systems using Solidity, Ethereum, and Web3 frameworks.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Blockchain Technology', 'Development', 'Decentralized Systems & Web3', 'Cryptography, Solidity, Ethereum Virtual Machine (EVM), Hardhat, Web3.js, Smart Contract Auditing', 'Fully deployed dApps and decentralized token architectures.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="dev" data-keywords="python programming coding backend automation data scripting">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-dev">Development</span>
+              <h3 class="course-title">Python Programming</h3>
+              <p class="course-desc">
+                From core logic and object-oriented architectures to data parsing, web scraping, and REST API development with FastAPI and Django.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Python Programming', 'Development', 'Core & Advanced Python', 'Python Syntax, OOP, Data Structures, File I/O, FastAPI, Web Scraping with BeautifulSoup/Selenium', 'Production-ready REST APIs and automation scripts.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="dev" data-keywords="odoo functional consultant erp business software accounting crm">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-dev">Development</span>
+              <h3 class="course-title">Odoo Functional Consultant</h3>
+              <p class="course-desc">
+                Configure and deploy enterprise ERP solutions spanning CRM, Sales, Invoicing, Inventory, Manufacturing, and Accounting with Odoo.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Odoo Functional Consultant', 'Development', 'Enterprise ERP Systems', 'Odoo Architecture, Accounting Modules, Supply Chain, CRM Configuration, Business Workflows', 'Turnkey ERP deployments for commercial businesses.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== CATEGORY: AI & DATA SCIENCE ==================== -->
+        <!-- Course 7 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="ai" data-keywords="artificial intelligence ai algorithms ml models">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-ai">AI & Data Science</span>
+              <h3 class="course-title">Artificial Intelligence</h3>
+              <p class="course-desc">
+                Explore intelligent decision algorithms, neural network design, statistical inference, and natural language processing pipelines.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Artificial Intelligence', 'AI & Data Science', 'Intelligent Computational Systems', 'Linear Algebra, Calculus for ML, Regression, Classification, Clustering, Neural Networks', 'AI models deployed on web endpoints.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 8 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="ai" data-keywords="ai data science analytics big data pandas visualization statistics">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-ai">AI & Data Science</span>
+              <h3 class="course-title">AI & Data Science</h3>
+              <p class="course-desc">
+                Extract actionable insights from raw structured and unstructured data using statistical modeling, Pandas, PowerBI, and ML models.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('AI & Data Science', 'AI & Data Science', 'Advanced Data Analytics & AI', 'Data Cleaning, Feature Engineering, EDA, Matplotlib, Seaborn, Supervised & Unsupervised Learning', 'Interactive dashboards and predictive intelligence notebooks.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 9 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="ai" data-keywords="generative ai genai llm diffusion stable diffusion rag prompt engineering">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-ai">AI & Data Science</span>
+              <h3 class="course-title">Generative AI</h3>
+              <p class="course-desc">
+                Harness foundational LLMs, prompt engineering, Retrieval-Augmented Generation (RAG), and multimodal image/video generation tools.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Generative AI', 'AI & Data Science', 'Generative Models & Prompting', 'Transformers, OpenAI APIs, Open-source LLMs (Llama), Prompt Architecture, RAG with Vector DBs', 'Custom domain chat assistants and automated generative content engines.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 10 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="ai" data-keywords="ai agent development autonomous crewai autogen orchestration">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-ai">AI & Data Science</span>
+              <h3 class="course-title">AI Agent Development</h3>
+              <p class="course-desc">
+                Engineering autonomous agents capable of independent problem-solving, real-time memory management, and tool integration.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('AI Agent Development', 'AI & Data Science', 'Autonomous Agent Engineering', 'Agent Workflows, Tool Integration, ReAct framework, Memory buffers, Self-healing executions', 'Multi-agent business automation fleets.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== CATEGORY: DESIGN & MEDIA ==================== -->
+        <!-- Course 11 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="design" data-keywords="ui ux design with ai figma user experience wireframe prototyping">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-design">Design & Media</span>
+              <h3 class="course-title">UI/UX Design with AI</h3>
+              <p class="course-desc">
+                Craft human-centric digital interfaces using Figma, AI-assisted design workflows, design systems, and usability research methodologies.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('UI/UX Design with AI', 'Design & Media', 'Digital Product & Interface Design', 'User Research, Wireframing, Figma Masterclass, Design Systems, Prototyping, AI Prototyping tools', 'Case-study backed Behance & Dribbble UX portfolio.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 12 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="design" data-keywords="graphic designing with ai photoshop illustrator branding logo design">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-design">Design & Media</span>
+              <h3 class="course-title">Graphic Designing with AI</h3>
+              <p class="course-desc">
+                Master visual communication, brand identity creation, typography, and commercial graphics supercharged with Midjourney and Adobe tools.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Graphic Designing with AI', 'Design & Media', 'Creative Visual Branding', 'Photoshop, Illustrator, Typography, Color Theory, Generative AI Art, Packaging Design', 'Full corporate brand identity packages.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 13 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="design" data-keywords="video animation after effects motion graphics 2d animation">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-design">Design & Media</span>
+              <h3 class="course-title">Video Animation</h3>
+              <p class="course-desc">
+                Create engaging 2D motion graphics, kinetic typography, character animation, and visual effects using Adobe After Effects and Blender.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Video Animation', 'Design & Media', 'Motion Graphics & 2D Animation', 'Principles of Animation, Keyframing, After Effects, Character Rigging, Sound Design, Rendering', 'Commercial explainer videos and showreel.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 14 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="design" data-keywords="video content creation premiere pro youtube reels editing storytelling">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-design">Design & Media</span>
+              <h3 class="course-title">Video Content Creation</h3>
+              <p class="course-desc">
+                Learn modern video storytelling, color grading, pacing, YouTube and short-form video optimization with Premiere Pro & DaVinci Resolve.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Video Content Creation', 'Design & Media', 'Digital Storytelling & Video Editing', 'Premiere Pro, DaVinci Resolve, Audio Mastering, Color Correction, Viral Short-Form Video', 'Commercial video projects and social content series.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 15 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="design" data-keywords="autocad 2d 3d drafting engineering architectural design cad">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-design">Design & Media</span>
+              <h3 class="course-title">AutoCAD</h3>
+              <p class="course-desc">
+                Computer-aided design and drafting for architectural blueprints, mechanical modeling, and technical construction documentation.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('AutoCAD', 'Design & Media', 'Technical Drafting & CAD', '2D Drafting, Geometric Dimensions, 3D Solid Modeling, Architectural Floorplans, Plotting', 'Complete architectural drawing sets and 3D models.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== CATEGORY: CYBERSECURITY & NETWORKING ==================== -->
+        <!-- Course 16 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="cyber" data-keywords="soc analyst cyberops security operations center threat hunting">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-cyber">Cybersecurity & Networking</span>
+              <h3 class="course-title">SOC Analyst CyberOps</h3>
+              <p class="course-desc">
+                Monitor security operation center alerts, detect malicious traffic, analyze malware behavior, and execute incident response procedures.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('SOC Analyst CyberOps', 'Cybersecurity & Networking', 'Security Operations & Incident Response', 'SIEM tools (Splunk, Wazuh), Network Traffic Analysis (Wireshark), Threat Hunting, Incident Handling', 'Real SOC simulation defense lab credentials.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 17 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="cyber" data-keywords="networking essentials cisco tcp ip routing switching subnetting">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-cyber">Cybersecurity & Networking</span>
+              <h3 class="course-title">Networking Essentials</h3>
+              <p class="course-desc">
+                Fundamental networking architectures, TCP/IP protocols, IPv4/IPv6 addressing, subnetting, and foundational switch configurations.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Networking Essentials', 'Cybersecurity & Networking', 'Fundamental Computer Networks', 'OSI Model, IPv4 Subnetting, Ethernet, Cisco Packet Tracer, Basic Switch & Router Setup', 'Configured LAN environments and subnet designs.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 18 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="cyber" data-keywords="cybersecurity essentials ethical hacking vulnerability assessment defense">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-cyber">Cybersecurity & Networking</span>
+              <h3 class="course-title">Cybersecurity Essentials</h3>
+              <p class="course-desc">
+                Core principles of information security, vulnerability assessment, cryptography basics, and endpoint security hygiene.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Cybersecurity Essentials', 'Cybersecurity & Networking', 'Foundational InfoSec', 'Threat Landscapes, Social Engineering, Passwords & Access Control, Firewalls, Port Scanning', 'Vulnerability assessment and hardening reports.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 19 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="cyber" data-keywords="cyberops associate cisco certification security forensics">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-cyber">Cybersecurity & Networking</span>
+              <h3 class="course-title">CyberOps Associate</h3>
+              <p class="course-desc">
+                Cisco-aligned cybersecurity operations training covering host-based analysis, attack methods, network forensics, and policy adherence.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('CyberOps Associate', 'Cybersecurity & Networking', 'Cisco Certified Defense Operations', 'Host Forensics, Network Forensics, Intrusion Analysis, Cyber Kill Chain, MITRE ATT&CK', 'Certified preparation for international CyberOps roles.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== CATEGORY: VOCATIONAL & PROFESSIONAL SKILLS ==================== -->
+        <!-- Course 20 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="vocational" data-keywords="digital marketing with ai seo sem social media marketing google ads">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-vocational">Vocational & Professional</span>
+              <h3 class="course-title">Digital Marketing with AI</h3>
+              <p class="course-desc">
+                Grow brands through data-backed SEO, Meta ads, Google performance marketing, and generative AI copy & funnel strategies.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Digital Marketing with AI', 'Vocational & Professional', 'Performance Growth Marketing', 'SEO Strategies, Google Ads, Meta Business Manager, Copywriting with AI, Conversion Funnels', 'Live ad campaigns and conversion growth case studies.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 21 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="vocational" data-keywords="professional communication corporate business writing interview skills">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-vocational">Vocational & Professional</span>
+              <h3 class="course-title">Professional Communication</h3>
+              <p class="course-desc">
+                Executive communication, email etiquette, client negotiations, pitch presentations, and interview mastery for global workplaces.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Professional Communication', 'Vocational & Professional', 'Workplace Soft Skills', 'Business Correspondence, Pitching Proposals, Remote Team Collaboration, Cross-cultural Skills', 'Recorded client presentations and negotiation simulations.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 22 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="vocational" data-keywords="english language spoken english business english ielts fluency">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-vocational">Vocational & Professional</span>
+              <h3 class="course-title">English Language</h3>
+              <p class="course-desc">
+                Elevate spoken fluency, grammatical precision, technical vocabulary, and conversational ease to communicate confidently with international clients.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('English Language', 'Vocational & Professional', 'Fluency & Conversational Mastery', 'Grammar Structures, Accent Neutralization, Vocabulary Expansion, Group Discussions, Public Speaking', 'Mock client interview certifications.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 23 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="vocational" data-keywords="health safety environment hse osha industrial compliance">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-vocational">Vocational & Professional</span>
+              <h3 class="course-title">Health, Safety & Environment (HSE)</h3>
+              <p class="course-desc">
+                Occupational health protocols, risk evaluation, environmental regulations, hazard mitigation, and workplace safety compliance.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Health, Safety & Environment (HSE)', 'Vocational & Professional', 'Occupational Safety & Compliance', 'Risk Assessment, Emergency Response, Fire Safety, Environmental Impact, OSHA fundamentals', 'Certified safety audit plans.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 24 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="vocational" data-keywords="domestic electrician electrical wiring repairs maintenance">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-vocational">Vocational & Professional</span>
+              <h3 class="course-title">Domestic Electrician</h3>
+              <p class="course-desc">
+                Practical hands-on training in residential wiring, circuit breaker boards, inverter setups, and electrical troubleshooting for immediate livelihood.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Domestic Electrician', 'Vocational & Professional', 'Practical Electrical Trades', 'Circuit Diagrams, Conduit Wiring, Distribution Boards, Solar Inverter Connections, Safety Protocols', 'Certified vocational technical competence.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 25 -->
+        <div class="col-md-6 col-lg-4 course-item" data-category="vocational" data-keywords="plumber technician plumbing piping fixtures water systems">
+          <div class="course-card">
+            <div>
+              <span class="course-category-tag tag-vocational">Vocational & Professional</span>
+              <h3 class="course-title">Plumber Technician</h3>
+              <p class="course-desc">
+                Comprehensive practical training in residential and commercial plumbing, pipe fitting, sanitary fixture installations, and maintenance.
+              </p>
+            </div>
+            <div>
+              <div class="course-meta">
+                <span><i class="bi bi-geo-alt text-cyan"></i> Karachi & Sukkur</span>
+                <span class="text-warning">Check Official Admissions</span>
+              </div>
+              <div class="course-actions">
+                <button class="btn-course-details" onclick="openCourseModal('Plumber Technician', 'Vocational & Professional', 'Sanitary & Piping Trades', 'PPRC/PVC Jointing, Pressure Testing, Fixture Installations, Drainage Planning, Modern Sanitary Equipment', 'Field-ready professional skills verification.')">Details</button>
+                <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-course-apply">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No Results Feedback State -->
+      <div id="noCoursesFound" class="text-center py-5 d-none">
+        <i class="bi bi-search text-muted-custom fs-1 mb-3 d-block"></i>
+        <h4 class="text-white">No Matching Courses Found</h4>
+        <p class="text-muted-custom">Try searching for other terms like "AI", "Python", "Web", or "Design".</p>
+        <button class="btn btn-sm btn-titan-primary mt-2" onclick="resetFilters()">Reset All Filters</button>
+      </div>
+
+      <!-- Course Disclaimer & Guidance Note -->
+      <div class="titan-card mt-5 p-4 reveal">
+        <div class="row align-items-center g-3">
+          <div class="col-md-8">
+            <h4 class="h6 text-warning mb-1"><i class="bi bi-info-circle-fill me-2"></i> Important Admissions Notice</h4>
+            <p class="small text-muted-custom mb-0">
+              The courses presented reflect the comprehensive academic syllabus of Saylani TITAN. Specific batch schedules, seat quotas, and entrance test dates vary by campus (Karachi Zamzama vs. Sukkur IT Park). Always check the official Saylani IT portal for real-time batch openings.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="https://www.saylaniit.com/courses" target="_blank" rel="noopener noreferrer" class="btn-titan-secondary btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Verify on Official Site
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. STUDENT SUCCESS STORIES SECTION
+       ========================================================================== -->
+  <section id="stories" class="section-padding bg-navy-surface subtle-dots-bg" style="background-color: var(--navy-surface);">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-badge">
+          <span class="dot"></span> Verified Alumni Achievements
+        </div>
+        <h2 class="section-title">Inspiring Journeys from Classrooms to Careers</h2>
+        <p class="section-subtitle">
+          Real stories of youth across Pakistan who acquired world-class tech skills through Saylani TITAN and achieved life-changing career breakthroughs and financial independence.
+        </p>
+      </div>
+
+      <!-- Large Featured Success Story -->
+      <div class="featured-story-card reveal">
+        <span class="featured-badge"><i class="bi bi-award-fill me-1"></i> Featured Alumni Spotlight</span>
+        <div class="row align-items-center g-4">
+          <div class="col-lg-3 text-center">
+            <!-- Authentic Student/Graduate avatar with fallback -->
+            <img src="logo.jpg" alt="TITAN Certified Graduate" class="student-avatar mb-3" style="width:110px; height:110px;" onerror="this.onerror=null; this.src='logo.jpg';">
+            <h4 class="h5 text-white mb-1">Muhammad Bilal</h4>
+            <div class="badge bg-primary text-white mb-2">Zamzama Campus Graduate</div>
+            <div class="small text-cyan font-mono">Modern Web & App Track</div>
+          </div>
+          <div class="col-lg-9">
+            <div class="quote-icon"><i class="bi bi-quote"></i></div>
+            <p class="lead text-white mb-3" style="font-size: 1.15rem;">
+              "Joining the Saylani TITAN program at the Zamzama campus completely redefined my career trajectory. Coming from a non-CS background, the intensive, project-first mentorship gave me practical hands-on experience with Next.js and Cloud APIs. Today, I am working remotely for an international software agency earning over PKR 125,000 every month."
+            </p>
+            <div class="d-flex flex-wrap gap-4 text-secondary small pt-2 border-top border-secondary border-opacity-25">
+              <span><strong class="text-white">Current Role:</strong> Full-Stack Engineer</span>
+              <span><strong class="text-white">Outcome:</strong> High-Earning Remote Employment</span>
+              <span><strong class="text-white">Verification:</strong> Verified SMIT Alumni Network</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Stories Cards Grid -->
+      <div class="row g-4 mb-5">
+        <!-- Story Card 1 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="story-card">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="rounded-circle bg-primary bg-opacity-25 p-3 text-info fw-bold fs-5">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <div>
+                  <h4 class="h6 text-white mb-0">Ahmed Rayyan</h4>
+                  <span class="small text-cyan">Sukkur TITAN IT Park Cohort</span>
+                </div>
+              </div>
+              <p class="small text-secondary mb-3">
+                "At the Sukkur campus, we had access to high-spec hardware that allowed us to train deep learning models. My final year project won recognition at a regional tech exhibition and opened direct interview opportunities with local tech hubs."
+              </p>
+            </div>
+            <div class="border-top border-secondary border-opacity-25 pt-3">
+              <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50">
+                <i class="bi bi-check2"></i> AI & Data Science Alum
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Card 2 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="story-card">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="rounded-circle bg-warning bg-opacity-25 p-3 text-warning fw-bold fs-5">
+                  <i class="bi bi-stars"></i>
+                </div>
+                <div>
+                  <h4 class="h6 text-white mb-0">Syeda Dua Fatima</h4>
+                  <span class="small text-warning">Zamzama Campus Cohort</span>
+                </div>
+              </div>
+              <p class="small text-secondary mb-3">
+                "The UI/UX with AI track taught me not just how to use Figma, but how to research user psychology and design scalable design systems. I reached Top Rated freelancer status on Upwork within 6 months of graduation."
+              </p>
+            </div>
+            <div class="border-top border-secondary border-opacity-25 pt-3">
+              <span class="badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-50">
+                <i class="bi bi-check2"></i> Top-Rated Freelancer
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Card 3 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="story-card">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="rounded-circle bg-info bg-opacity-25 p-3 text-info fw-bold fs-5">
+                  <i class="bi bi-shield-shaded"></i>
+                </div>
+                <div>
+                  <h4 class="h6 text-white mb-0">Usama Imtiaz</h4>
+                  <span class="small text-cyan">CyberOps & SOC Track</span>
+                </div>
+              </div>
+              <p class="small text-secondary mb-3">
+                "The live SOC laboratory drills and real malware traffic simulations prepared me directly for industry security roles. I secured a SOC Analyst position at a leading financial institution right after finishing."
+              </p>
+            </div>
+            <div class="border-top border-secondary border-opacity-25 pt-3">
+              <span class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-50">
+                <i class="bi bi-check2"></i> Placed as SOC Analyst
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Button Linking to Official Facebook Page -->
+      <div class="text-center reveal">
+        <a href="https://www.facebook.com/p/TITAN-Taj-Institute-of-Technology-Applied-Networks-61582828360450/" target="_blank" rel="noopener noreferrer" class="btn-titan-primary btn-lg">
+          <i class="bi bi-facebook"></i> Explore More Success Stories on Official TITAN Facebook
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. CAMPUS LOCATIONS — INTERACTIVE WORLD / REGIONAL MAP
+       ========================================================================== -->
+  <section id="campuses" class="section-padding tech-grid-bg">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-badge">
+          <span class="dot"></span> Geographic Footprint
+        </div>
+        <h2 class="section-title">Explore Our State-of-the-Art Campuses</h2>
+        <p class="section-subtitle">
+          Saylani TITAN operates flagship campuses equipped with modern computing laboratories, collaborative workspaces, and high-speed research facilities across Sindh, Pakistan.
+        </p>
+      </div>
+
+      <!-- Map Visual Wrapper (Google Maps / Sindh Regional Map) -->
+      <div class="map-container-wrapper mb-5 reveal">
+        <!-- Overlay Map Control Buttons -->
+        <div class="map-overlay-controls">
+          <button class="map-ctrl-btn" onclick="focusCampus('zamzama')">
+            <i class="bi bi-building"></i> Focus Karachi (Zamzama)
+          </button>
+          <button class="map-ctrl-btn" onclick="focusCampus('sukkur')">
+            <i class="bi bi-cpu"></i> Focus Sukkur (IT Park)
+          </button>
+          <button class="map-ctrl-btn" onclick="resetMapView()">
+            <i class="bi bi-arrows-fullscreen"></i> Reset Map View
+          </button>
+        </div>
+
+        <!-- Visual Map Container -->
+        <div class="google-map-visual" id="titanMapVisual" role="region" aria-label="Interactive Map of Saylani TITAN Campuses">
+          <!-- Google Maps Search Bar UI -->
+          <div class="gmap-search-bar d-none d-sm-flex">
+            <i class="bi bi-geo-alt-fill text-danger fs-5"></i>
+            <div>
+              <span class="d-block text-dark fw-bold small" style="line-height:1.2;">Saylani TITAN Campuses</span>
+              <span class="d-block text-muted extra-small" style="font-size:0.75rem;">Sindh, Pakistan • 2 Active Hubs</span>
+            </div>
+          </div>
+
+          <!-- Base Map Image (Sindh, Pakistan) -->
+          <img src="https://www.freeworldmaps.net/asia/pakistan/sindh/sindh-map.jpg" id="mapBgImage" alt="Google Map of Sindh Pakistan showing Saylani TITAN Campuses" class="google-map-img-bg" onerror="this.onerror=null; this.src='WhatsApp Image 2026-11-07 at 11.55.07 PM.jpeg';">
+
+          <!-- Location Marker 1: Karachi Zamzama -->
+          <div id="markerKarachi" class="map-visual-marker" style="left: 28%; top: 78%;" onclick="toggleMapPopup('karachi')">
+            <!-- Popup Info Box -->
+            <div id="popupKarachi" class="marker-info-popup">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="badge bg-primary text-white extra-small" style="font-size:0.72rem;">Karachi Flagship</span>
+                <span class="text-warning extra-small" style="font-size:0.75rem;"><i class="bi bi-star-fill"></i> 4.9 (800+)</span>
+              </div>
+              <h4 class="h6 text-white mb-1">Saylani TITAN Zamzama</h4>
+              <p class="text-secondary extra-small mb-2" style="font-size:0.78rem; line-height:1.4;">
+                3rd Floor, Plot No. 15-C, 9th Zamzama Lane, DHA Phase 5, Karachi.
+              </p>
+              <a href="https://www.google.com/maps/search/?api=1&query=3rd+Floor+Plot+15-C+9th+Zamzama+Lane+Defence+V+Karachi" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-titan-primary w-100 py-1" style="font-size:0.76rem;">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Get Directions
+              </a>
+            </div>
+
+            <div class="marker-pin-header">
+              <i class="bi bi-geo-alt-fill"></i> Karachi Zamzama
+            </div>
+            <div class="marker-pin-arrow"></div>
+            <div class="marker-pin-ripple"></div>
+          </div>
+
+          <!-- Location Marker 2: Sukkur IT Park -->
+          <div id="markerSukkur" class="map-visual-marker" style="left: 58%; top: 25%;" onclick="toggleMapPopup('sukkur')">
+            <!-- Popup Info Box -->
+            <div id="popupSukkur" class="marker-info-popup">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="badge bg-warning text-dark extra-small fw-bold" style="font-size:0.72rem;">TITAN IT Park</span>
+                <span class="text-warning extra-small" style="font-size:0.75rem;"><i class="bi bi-star-fill"></i> 4.9 Regional Hub</span>
+              </div>
+              <h4 class="h6 text-white mb-1">Saylani TITAN Sukkur</h4>
+              <p class="text-secondary extra-small mb-2" style="font-size:0.78rem; line-height:1.4;">
+                Military Road, opposite Taj Gasoline Pump, near Hotel One, Sukkur.
+              </p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Saylani+TITAN+Military+Road+opposite+Taj+Gasoline+near+Hotel+One+Sukkur" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-titan-gold w-100 py-1" style="font-size:0.76rem;">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Get Directions
+              </a>
+            </div>
+
+            <div class="marker-pin-header gold">
+              <i class="bi bi-geo-alt-fill"></i> Sukkur IT Park
+            </div>
+            <div class="marker-pin-arrow gold"></div>
+            <div class="marker-pin-ripple gold"></div>
+          </div>
+
+          <!-- Bottom Left Watermark -->
+          <div class="gmap-watermark">
+            <i class="bi bi-geo-fill text-danger"></i>
+            <span class="fw-bold">Google Maps Overview</span>
+            <span class="text-muted extra-small">| Sindh Province</span>
+          </div>
+
+          <!-- Bottom Right Zoom Controls -->
+          <div class="gmap-zoom-controls">
+            <button class="gmap-zoom-btn" onclick="zoomVisualMap(1.18)" title="Zoom in" aria-label="Zoom in">+</button>
+            <button class="gmap-zoom-btn" onclick="zoomVisualMap(1.0)" title="Reset Zoom" aria-label="Reset zoom">−</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campus Showcase Cards Below Map -->
+      <div class="row g-4">
+        <!-- Campus 1: Karachi Zamzama -->
+        <div class="col-lg-6 reveal">
+          <div class="campus-card">
+            <div class="campus-img-header">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Saylani TITAN Zamzama Campus Karachi - Modern Technology Training Facility" onerror="this.onerror=null; this.src='WhatsApp Image 2026-11-07 at 11.55.07 PM.jpeg';">
+              <span class="campus-badge"><i class="bi bi-geo-alt-fill"></i> Karachi • Zamzama</span>
+            </div>
+            <div class="campus-card-body">
+              <div>
+                <h3 class="h4 text-white mb-2">Saylani TITAN Zamzama Campus</h3>
+                <p class="text-cyan small mb-3">
+                  <i class="bi bi-pin-map-fill me-1"></i> 3rd Floor, Plot No. 15-C, 9th Zamzama Lane, Zamzama Commercial Area, Defence V (DHA), Karachi.
+                </p>
+                <p class="text-muted-custom small mb-4">
+                  Situated in the prestigious Zamzama commercial district of Karachi, this flagship facility boasts modern workstations, high-speed fiber connectivity, dedicated AI experimentation hubs, and modern collaborative spaces.
+                </p>
+              </div>
+              <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary border-opacity-25">
+                <button class="btn btn-sm btn-titan-primary" onclick="focusCampus('zamzama')">
+                  <i class="bi bi-crosshair"></i> Focus on Map
+                </button>
+                <a href="https://www.google.com/maps/search/?api=1&query=3rd+Floor+Plot+15-C+9th+Zamzama+Lane+Defence+V+Karachi" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-titan-secondary">
+                  <i class="bi bi-box-arrow-up-right"></i> Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campus 2: Sukkur Campus -->
+        <div class="col-lg-6 reveal">
+          <div class="campus-card">
+            <div class="campus-img-header">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Saylani TITAN Sukkur Campus - Advanced Regional IT Park Hub" onerror="this.onerror=null; this.src='WhatsApp Image 2026-11-07 at 11.55.08 PM.jpeg';">
+              <span class="campus-badge" style="border-color: var(--gold-accent); color: var(--gold-accent);">
+                <i class="bi bi-geo-alt-fill"></i> Sukkur • TITAN IT Park
+              </span>
+            </div>
+            <div class="campus-card-body">
+              <div>
+                <h3 class="h4 text-white mb-2">Saylani TITAN Sukkur Campus</h3>
+                <p class="text-warning small mb-3">
+                  <i class="bi bi-pin-map-fill me-1"></i> Military Road, opposite Taj Gasoline Pump, near Hotel One, Sukkur.
+                </p>
+                <p class="text-muted-custom small mb-4">
+                  Serving as Upper Sindh's premiere tech hub, the Sukkur campus provides regional youth with advanced hardware labs, high-throughput cloud infrastructure, and an active incubator for student technology enterprises.
+                </p>
+              </div>
+              <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary border-opacity-25">
+                <button class="btn btn-sm btn-titan-primary" onclick="focusCampus('sukkur')">
+                  <i class="bi bi-crosshair"></i> Focus on Map
+                </button>
+                <a href="https://www.google.com/maps/search/?api=1&query=Saylani+TITAN+Military+Road+opposite+Taj+Gasoline+near+Hotel+One+Sukkur" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-titan-secondary">
+                  <i class="bi bi-box-arrow-up-right"></i> Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. ADMISSIONS SECTION
+       ========================================================================== -->
+  <section id="admissions" class="section-padding bg-navy-surface" style="background-color: var(--navy-surface);">
+    <div class="container">
+      <div class="admissions-box reveal">
+        <div class="text-center mb-5">
+          <div class="section-badge">
+            <span class="dot"></span> Official Portal Registration
+          </div>
+          <h2 class="section-title gradient-text-gold">YOUR JOURNEY STARTS HERE</h2>
+          <p class="section-subtitle">
+            Take your first step towards a brighter digital future. Explore available programs and apply through the official Saylani admissions portal.
+          </p>
+        </div>
+
+        <!-- 3-Step Process -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <h3 class="h5 text-white mb-2">Explore Programs</h3>
+              <p class="small text-muted-custom mb-0">
+                Browse our curriculum tracks in Development, AI, Design, Cybersecurity, or Applied Vocational Skills to find your ideal focus.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <h3 class="h5 text-white mb-2">Check Eligibility & Campus</h3>
+              <p class="small text-muted-custom mb-0">
+                Verify prerequisites, entrance criteria, and seat availability at Karachi Zamzama or Sukkur TITAN IT Park.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <h3 class="h5 text-white mb-2">Apply Via Official Portal</h3>
+              <p class="small text-muted-custom mb-0">
+                Fill in your candidate details, download your test roll number slip, and participate in the official entrance assessment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Application CTA Block -->
+        <div class="titan-card bg-dark bg-opacity-50 p-4 text-center">
+          <h4 class="text-white mb-3">Ready to transform your technical career?</h4>
+          <p class="text-secondary small mb-4 max-w-600 mx-auto">
+            Admission to Saylani TITAN is strictly merit-based and processed exclusively through the official Saylani Welfare registration portal. No tuition fees are charged to selected candidates.
+          </p>
+          <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn-titan-gold btn-lg py-3 px-5 fs-5">
+            <i class="bi bi-box-arrow-up-right me-2"></i> Apply Through Official Portal (saylaniit.com/enroll)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. GALLERY SECTION
+       ========================================================================== -->
+  <section id="gallery" class="section-padding tech-grid-bg">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-badge">
+          <span class="dot"></span> Life at Saylani TITAN
+        </div>
+        <h2 class="section-title">Campus Life, Innovation & Ceremonies</h2>
+        <p class="section-subtitle">
+          A glimpse into our classrooms, computer laboratories, project hackathons, and certified graduation milestones.
+        </p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="row g-4">
+        <!-- Item 1: TITAN Digital Platform -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80', 'TITAN High-Tech Digital Platform - Interactive Learning & Code Terminal')">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="TITAN High-Tech Digital Platform" onerror="this.onerror=null; this.src='WhatsApp Image 2026-11-07 at 11.55.07 PM.jpeg';">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-zoom-in"></i></span>
+              <h4 class="h6 text-white mb-1">TITAN High-Tech Digital Platform</h4>
+              <p class="extra-small text-cyan mb-0" style="font-size:0.75rem;">Interactive Learning & Code Terminal</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Curriculum & Industry Skills -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80', 'Curriculum & Industry Skills - Hands-on Project Oriented Tracks')">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Curriculum & Industry Skills Project Collaboration" onerror="this.onerror=null; this.src='WhatsApp Image 2026-11-07 at 11.55.08 PM.jpeg';">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-zoom-in"></i></span>
+              <h4 class="h6 text-white mb-1">Curriculum & Industry Skills</h4>
+              <p class="extra-small text-cyan mb-0" style="font-size:0.75rem;">Hands-on Project Oriented Tracks</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Official TITAN Insignia -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="gallery-item bg-white" onclick="openLightbox('logo.jpg', 'Saylani TITAN Official Insignia & Shield - ESTD. 2025')">
+            <img src="logo.jpg" alt="Saylani TITAN Official Insignia" class="p-3" style="object-fit: contain;">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-zoom-in"></i></span>
+              <h4 class="h6 text-white mb-1">Official TITAN Insignia</h4>
+              <p class="extra-small text-gold mb-0" style="font-size:0.75rem;">ESTD. 2025 • Taj Institute of Technology</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Advanced Computer Laboratories -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80', 'Advanced Computer Laboratories - Karachi & Sukkur Computing Labs')">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Advanced Computer Laboratories" onerror="this.onerror=null; this.src='logo.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-zoom-in"></i></span>
+              <h4 class="h6 text-white mb-1">Advanced Computer Laboratories</h4>
+              <p class="extra-small text-cyan mb-0" style="font-size:0.75rem;">Karachi & Sukkur Computing Labs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Applied AI & Software Workstations -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80', 'Applied AI & Software Workstations - High-Performance Workstation Clusters')">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" alt="Applied AI & Software Workstations" onerror="this.onerror=null; this.src='logo.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-zoom-in"></i></span>
+              <h4 class="h6 text-white mb-1">Applied AI & Software Workstations</h4>
+              <p class="extra-small text-cyan mb-0" style="font-size:0.75rem;">High-Performance Workstation Clusters</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Graduation & Certification -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="gallery-item bg-navy-card" onclick="openLightbox('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80', '970+ Certified Graduates - Celebrating Student Excellence & Milestones')">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="TITAN Certified Graduation & Student Success" onerror="this.onerror=null; this.src='logo.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-zoom-in"></i></span>
+              <h4 class="h6 text-white mb-1">970+ Certified Graduates</h4>
+              <p class="extra-small text-gold mb-0" style="font-size:0.75rem;">Celebrating Student Excellence & Milestones</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. WHY CHOOSE SAYLANI TITAN (Icon Cards)
+       ========================================================================== -->
+  <section id="why-titan" class="section-padding bg-navy-surface subtle-dots-bg" style="background-color: var(--navy-surface);">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-badge">
+          <span class="dot"></span> Why Saylani TITAN
+        </div>
+        <h2 class="section-title">Designed for Real-World Industry Success</h2>
+        <p class="section-subtitle">
+          We combine free accessibility, industry rigor, and dedicated career placement support to turn passionate learners into world-class engineers.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-gift-fill"></i>
+            </div>
+            <h3 class="h5 text-white mb-2">Accessible Tech Education</h3>
+            <p class="small text-muted-custom mb-0">
+              Zero tuition fee barriers. Purely merit-driven selection that opens top-tier tech instruction to all segments of society.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+            <h3 class="h5 text-white mb-2">Industry-Focused Learning</h3>
+            <p class="small text-muted-custom mb-0">
+              Curricula aligned with global Silicon Valley, European, and Gulf employer requirements, continuously updated.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-code-square"></i>
+            </div>
+            <h3 class="h5 text-white mb-2">Practical Projects</h3>
+            <p class="small text-muted-custom mb-0">
+              Build production-grade applications and github portfolios ready for client inspection rather than rote memorization.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-person-video3"></i>
+            </div>
+            <h3 class="h5 text-white mb-2">Experienced Mentorship</h3>
+            <p class="small text-muted-custom mb-0">
+              Learn directly from active lead engineers, tech architects, and senior industry practitioners.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h3 class="h5 text-white mb-2">Career Development</h3>
+            <p class="small text-muted-custom mb-0">
+              Resume optimization, mock interviews, freelance platform profiles, and direct employer networking pipelines.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-rocket-takeoff-fill"></i>
+            </div>
+            <h3 class="h5 text-white mb-2">Entrepreneurial Incubation</h3>
+            <p class="small text-muted-custom mb-0">
+              Seed funding facilitation and startup mentoring supported through Taj Gasoline's economic empowerment mandate.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <h3 class="h5 text-white mb-2">Applied AI & Future Skills</h3>
+            <p class="small text-muted-custom mb-0">
+              Early adoption of Agentic AI, large language models, modern cloud stacks, and next-generation frameworks.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h3 class="h5 text-white mb-2">Youth Empowerment</h3>
+            <p class="small text-muted-custom mb-0">
+              Transforming youth into high-earning economic contributors and foreign remittance earners for Pakistan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. CONTACT AND SOCIAL MEDIA SECTION
+       ========================================================================== -->
+  <section id="contact" class="section-padding tech-grid-bg">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-badge">
+          <span class="dot"></span> Get in Touch
+        </div>
+        <h2 class="section-title">Connect with Saylani TITAN</h2>
+        <p class="section-subtitle">
+          Have inquiries regarding admissions, campus visits, or partnerships? Reach out to our campus offices or send us a message below.
+        </p>
+      </div>
+
+      <div class="row g-5">
+        <!-- Campus Info Column -->
+        <div class="col-lg-5 reveal">
+          <!-- Karachi Campus Contact -->
+          <div class="contact-info-card">
+            <div class="d-flex align-items-center gap-2 mb-3 text-cyan">
+              <i class="bi bi-building fs-4"></i>
+              <h3 class="h5 text-white mb-0">Karachi Zamzama Campus</h3>
+            </div>
+            <p class="small text-secondary mb-2">
+              <i class="bi bi-geo-alt-fill text-cyan me-2"></i> 3rd Floor, Plot No. 15-C, 9th Zamzama Lane, Zamzama Commercial Area, Defence V (DHA), Karachi.
+            </p>
+            <p class="small text-secondary mb-2">
+              <i class="bi bi-telephone-fill text-cyan me-2"></i> +92 21 111 729 526 (Saylani UAN)
+            </p>
+            <p class="small text-secondary mb-0">
+              <i class="bi bi-clock-fill text-cyan me-2"></i> Monday – Saturday: 9:00 AM – 6:00 PM
+            </p>
+          </div>
+
+          <!-- Sukkur Campus Contact -->
+          <div class="contact-info-card">
+            <div class="d-flex align-items-center gap-2 mb-3 text-warning">
+              <i class="bi bi-cpu fs-4"></i>
+              <h3 class="h5 text-white mb-0">Sukkur TITAN IT Park Campus</h3>
+            </div>
+            <p class="small text-secondary mb-2">
+              <i class="bi bi-geo-alt-fill text-warning me-2"></i> Military Road, opposite Taj Gasoline Pump, near Hotel One, Sukkur.
+            </p>
+            <p class="small text-secondary mb-2">
+              <i class="bi bi-telephone-fill text-warning me-2"></i> Sukkur Regional Helpline / Saylani IT
+            </p>
+            <p class="small text-secondary mb-0">
+              <i class="bi bi-clock-fill text-warning me-2"></i> Monday – Saturday: 9:00 AM – 6:00 PM
+            </p>
+          </div>
+
+          <!-- Official Social Channels -->
+          <div class="contact-info-card">
+            <h4 class="h6 text-white mb-3">Official Digital Channels</h4>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="https://www.facebook.com/p/TITAN-Taj-Institute-of-Technology-Applied-Networks-61582828360450/" target="_blank" rel="noopener noreferrer" class="social-btn" title="TITAN Facebook Page">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.saylaniit.com/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Saylani IT Official Website">
+                <i class="bi bi-globe"></i>
+              </a>
+              <a href="https://tajgasoline.com/about-us/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Taj Gasoline Official About Page">
+                <i class="bi bi-fuel-pump"></i>
+              </a>
+              <a href="https://www.youtube.com/@SaylaniWelfareInternationalTrust" target="_blank" rel="noopener noreferrer" class="social-btn" title="Saylani YouTube Channel">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend Contact Form Column -->
+        <div class="col-lg-7 reveal">
+          <div class="contact-form-card">
+            <h3 class="h4 text-white mb-2">Send an Inquiry</h3>
+            <p class="small text-muted-custom mb-4">
+              Fill out this form for general inquiries. For active batch enrollments, please visit the official admissions portal directly.
+            </p>
+
+            <form id="titanContactForm" onsubmit="handleContactSubmit(event)" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label text-secondary small fw-semibold">Full Name *</label>
+                  <input type="text" class="form-control form-control-titan" id="contactName" placeholder="e.g. Ali Khan" required>
+                  <div class="invalid-feedback text-danger small">Please enter your name.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label text-secondary small fw-semibold">Email Address *</label>
+                  <input type="email" class="form-control form-control-titan" id="contactEmail" placeholder="e.g. ali@example.com" required>
+                  <div class="invalid-feedback text-danger small">Please enter a valid email address.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactPhone" class="form-label text-secondary small fw-semibold">Phone Number *</label>
+                  <input type="tel" class="form-control form-control-titan" id="contactPhone" placeholder="0300 1234567" required>
+                  <div class="invalid-feedback text-danger small">Please enter your contact number.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactCampus" class="form-label text-secondary small fw-semibold">Preferred Campus</label>
+                  <select class="form-select form-control-titan" id="contactCampus">
+                    <option value="Karachi Zamzama">Saylani TITAN Zamzama Campus (Karachi)</option>
+                    <option value="Sukkur IT Park">Saylani TITAN Sukkur Campus (Sukkur)</option>
+                    <option value="General Inquiry">General / Both Campuses</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="contactSubject" class="form-label text-secondary small fw-semibold">Program of Interest</label>
+                  <input type="text" class="form-control form-control-titan" id="contactSubject" placeholder="e.g. Modern Web Development, Agentic AI, UI/UX...">
+                </div>
+
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label text-secondary small fw-semibold">Message / Inquiry *</label>
+                  <textarea class="form-control form-control-titan" id="contactMessage" rows="4" placeholder="How can our admissions and advisory team help you?" required></textarea>
+                  <div class="invalid-feedback text-danger small">Please enter your message.</div>
+                </div>
+
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn-titan-primary w-100 justify-content-center py-3">
+                    <i class="bi bi-send-fill"></i> Submit Inquiry
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Success / Demo Notice Alert -->
+            <div id="formSuccessAlert" class="alert alert-success mt-4 d-none bg-success bg-opacity-25 border-success text-white" role="alert">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-success fs-4"></i>
+                <div>
+                  <strong>Thank You!</strong> Your inquiry has been noted. Please note that active student applications must be submitted via the <a href="https://www.saylaniit.com/enroll" class="text-warning text-decoration-underline" target="_blank" rel="noopener noreferrer">Official Saylani Admissions Portal</a>.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. FOOTER
+       ========================================================================== -->
+  <footer class="titan-footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Col 1: Institute Branding -->
+        <div class="col-lg-4 col-md-6">
+          <img src="logo.jpg" alt="Saylani TITAN Logo" class="footer-logo-img">
+          <h3 class="h5 text-white mb-2">SAYLANI TITAN</h3>
+          <p class="small text-cyan mb-3">Taj Institute of Technology & Applied Networks</p>
+          <p class="small text-muted-custom mb-4">
+            A collaborative initiative between Saylani Mass IT Training (SMIT) and TAJ TITAN, dedicated to empowering Pakistan's youth through world-class technology education, innovative problem solving, and sustainable livelihoods.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://www.facebook.com/p/TITAN-Taj-Institute-of-Technology-Applied-Networks-61582828360450/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.saylaniit.com/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Saylani IT"><i class="bi bi-globe"></i></a>
+            <a href="https://tajgasoline.com/about-us/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Taj Gasoline"><i class="bi bi-fuel-pump"></i></a>
+            <a href="https://www.saylanimit.com/" target="_blank" rel="noopener noreferrer" class="social-btn" title="SMIT"><i class="bi bi-laptop"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="bi bi-chevron-right text-cyan"></i> Home</a></li>
+            <li><a href="#about"><i class="bi bi-chevron-right text-cyan"></i> About TITAN</a></li>
+            <li><a href="#impact"><i class="bi bi-chevron-right text-cyan"></i> Impact</a></li>
+            <li><a href="#programs"><i class="bi bi-chevron-right text-cyan"></i> Programs</a></li>
+            <li><a href="#stories"><i class="bi bi-chevron-right text-cyan"></i> Stories</a></li>
+            <li><a href="#campuses"><i class="bi bi-chevron-right text-cyan"></i> Campuses</a></li>
+            <li><a href="#admissions"><i class="bi bi-chevron-right text-cyan"></i> Admissions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Course Categories -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="#programs"><i class="bi bi-chevron-right text-cyan"></i> Modern Web & Apps</a></li>
+            <li><a href="#programs"><i class="bi bi-chevron-right text-cyan"></i> Agentic & Generative AI</a></li>
+            <li><a href="#programs"><i class="bi bi-chevron-right text-cyan"></i> UI/UX Design with AI</a></li>
+            <li><a href="#programs"><i class="bi bi-chevron-right text-cyan"></i> CyberOps & Networking</a></li>
+            <li><a href="#programs"><i class="bi bi-chevron-right text-cyan"></i> Python & Data Science</a></li>
+            <li><a href="#programs"><i class="bi bi-chevron-right text-cyan"></i> Vocational Tech Skills</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Official Portals & Campuses -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Campuses</h4>
+          <div class="mb-3">
+            <span class="d-block text-white small fw-bold">Karachi Zamzama:</span>
+            <span class="d-block text-muted-custom extra-small" style="font-size:0.8rem;">
+              3rd Floor, Plot No. 15-C, 9th Zamzama Lane, DHA Phase 5, Karachi.
+            </span>
+          </div>
+          <div class="mb-4">
+            <span class="d-block text-white small fw-bold">Sukkur IT Park:</span>
+            <span class="d-block text-muted-custom extra-small" style="font-size:0.8rem;">
+              Military Road, opp. Taj Gasoline, near Hotel One, Sukkur.
+            </span>
+          </div>
+          <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-titan-gold w-100 text-center">
+            <i class="bi bi-mortarboard-fill me-1"></i> Apply for Next Intake
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="footer-bottom text-center">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-md-start mb-2 mb-md-0">
+            © 2026 Saylani TITAN. All Rights Reserved.
+          </div>
+          <div class="col-md-6 text-md-end text-muted-custom">
+            Joint Initiative of Saylani Welfare International Trust (SMIT) & Taj Institute of Technology & Applied Networks.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       13. MODALS & LIGHTBOX (Course Details Modal & Image Lightbox)
+       ========================================================================== -->
+  <!-- Course Details Modal -->
+  <div class="modal fade" id="courseDetailsModal" tabindex="-1" aria-labelledby="courseDetailsModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background:#071A35; border:1px solid var(--cyan-accent); border-radius:18px;">
+        <div class="modal-header border-secondary border-opacity-25">
+          <div>
+            <span id="modalTrackBadge" class="course-category-tag tag-dev mb-1">Development</span>
+            <h3 class="modal-title h4 text-white" id="courseDetailsModalTitle">Course Title</h3>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body py-4">
+          <div class="mb-4">
+            <h4 class="h6 text-cyan mb-2"><i class="bi bi-journal-code me-2"></i> Focus Track</h4>
+            <p id="modalTrackCategory" class="text-white small mb-0">-</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="h6 text-cyan mb-2"><i class="bi bi-layers-fill me-2"></i> Syllabus & Technologies Covered</h4>
+            <p id="modalTrackSyllabus" class="text-secondary small mb-0">-</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="h6 text-cyan mb-2"><i class="bi bi-trophy-fill me-2"></i> Real-World Project & Career Outcomes</h4>
+            <p id="modalTrackOutcomes" class="text-secondary small mb-0">-</p>
+          </div>
+          <div class="titan-card p-3 bg-dark bg-opacity-50">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-exclamation-circle-fill text-warning fs-4"></i>
+              <div class="small text-muted-custom">
+                Admission schedules and current seat allocations are governed by the central admissions council. Check official deadlines before applying.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary border-opacity-25">
+          <button type="button" class="btn btn-titan-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <a href="https://www.saylaniit.com/enroll" target="_blank" rel="noopener noreferrer" class="btn btn-titan-gold btn-sm">
+            Proceed to Official Admission Portal <i class="bi bi-box-arrow-up-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="modal fade lightbox-modal" id="galleryLightboxModal" tabindex="-1" aria-labelledby="lightboxCaption" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title h5 text-white" id="lightboxCaption">Image Preview</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-3">
+          <img id="lightboxImage" src="" alt="Enlarged Gallery Preview" class="img-fluid rounded" style="max-height: 75vh; object-fit: contain;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back-to-Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Scroll back to top" onclick="scrollToTop()">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- ==========================================================================
+       14. EXTERNAL SCRIPTS VIA CDN
+       ========================================================================== -->
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Leaflet 1.9.4 JS for Interactive Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- ==========================================================================
+       15. VANILLA JAVASCRIPT APPLICATION LOGIC
+       ========================================================================== -->
+  <script>
+    // ==========================================
+    // 1. VISUAL MAP SYSTEM (SINDH / GOOGLE MAPS)
+    // ==========================================
+    let currentMapZoom = 1.0;
+
+    function zoomVisualMap(scaleFactor) {
+      const mapImg = document.getElementById('mapBgImage');
+      if (!mapImg) return;
+      currentMapZoom = scaleFactor;
+      mapImg.style.transform = `scale(${currentMapZoom})`;
+    }
+
+    function toggleMapPopup(campusKey) {
+      const popupK = document.getElementById('popupKarachi');
+      const popupS = document.getElementById('popupSukkur');
+      const markerK = document.getElementById('markerKarachi');
+      const markerS = document.getElementById('markerSukkur');
+
+      if (campusKey === 'karachi' || campusKey === 'zamzama') {
+        if (popupK) popupK.style.display = (popupK.style.display === 'none') ? 'block' : 'none';
+        if (markerK) markerK.classList.add('highlighted');
+        if (markerS) markerS.classList.remove('highlighted');
+      } else if (campusKey === 'sukkur') {
+        if (popupS) popupS.style.display = (popupS.style.display === 'none') ? 'block' : 'none';
+        if (markerS) markerS.classList.add('highlighted');
+        if (markerK) markerK.classList.remove('highlighted');
+      }
+    }
+
+    function focusCampus(campusKey) {
+      const mapSection = document.getElementById('campuses');
+      if (mapSection) {
+        mapSection.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      const popupK = document.getElementById('popupKarachi');
+      const popupS = document.getElementById('popupSukkur');
+      const markerK = document.getElementById('markerKarachi');
+      const markerS = document.getElementById('markerSukkur');
+      const mapImg = document.getElementById('mapBgImage');
+
+      if (campusKey === 'zamzama' || campusKey === 'karachi') {
+        if (popupK) popupK.style.display = 'block';
+        if (popupS) popupS.style.display = 'none';
+        if (markerK) markerK.classList.add('highlighted');
+        if (markerS) markerS.classList.remove('highlighted');
+        if (mapImg) {
+          mapImg.style.transformOrigin = '28% 78%';
+          mapImg.style.transform = 'scale(1.22)';
+        }
+      } else if (campusKey === 'sukkur') {
+        if (popupS) popupS.style.display = 'block';
+        if (popupK) popupK.style.display = 'none';
+        if (markerS) markerS.classList.add('highlighted');
+        if (markerK) markerK.classList.remove('highlighted');
+        if (mapImg) {
+          mapImg.style.transformOrigin = '58% 25%';
+          mapImg.style.transform = 'scale(1.22)';
+        }
+      }
+    }
+
+    function resetMapView() {
+      const popupK = document.getElementById('popupKarachi');
+      const popupS = document.getElementById('popupSukkur');
+      const markerK = document.getElementById('markerKarachi');
+      const markerS = document.getElementById('markerSukkur');
+      const mapImg = document.getElementById('mapBgImage');
+
+      if (popupK) popupK.style.display = 'block';
+      if (popupS) popupS.style.display = 'block';
+      if (markerK) markerK.classList.remove('highlighted');
+      if (markerS) markerS.classList.remove('highlighted');
+      if (mapImg) {
+        mapImg.style.transformOrigin = 'center center';
+        mapImg.style.transform = 'scale(1.0)';
+      }
+    }
+
+    // ==========================================
+    // 2. STICKY NAVBAR & ACTIVE LINK HIGHLIGHTING
+    // ==========================================
+    const mainNavbar = document.getElementById('mainNavbar');
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    const navLinks = document.querySelectorAll('.titan-navbar .nav-link');
+    const navbarCollapse = document.getElementById('titanNavbarContent');
+
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+
+      // Navbar background transition
+      if (scrollPos > 40) {
+        mainNavbar.classList.add('scrolled');
+      } else {
+        mainNavbar.classList.remove('scrolled');
+      }
+
+      // Back-to-top visibility
+      if (scrollPos > 400) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+
+      // Active Section Highlighting
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    });
+
+    // Auto-close mobile navbar on link click
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse && window.innerWidth < 992) {
+          bsCollapse.hide();
+        }
+      });
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ==========================================
+    // 3. ANIMATED STATISTICS COUNTERS
+    // ==========================================
+    let countersStarted = false;
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const prefix = counter.getAttribute('data-prefix') || '';
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const format = counter.getAttribute('data-format') || '';
+        const duration = 2000; // ms
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic curve
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const currentVal = Math.floor(easeOut * target);
+
+          let displayVal = currentVal;
+          if (format === 'comma') {
+            displayVal = currentVal.toLocaleString('en-US');
+          }
+
+          counter.innerText = `${prefix}${displayVal}${suffix}`;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            let finalDisplay = target;
+            if (format === 'comma') {
+              finalDisplay = target.toLocaleString('en-US');
+            }
+            counter.innerText = `${prefix}${finalDisplay}${suffix}`;
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+    }
+
+    // IntersectionObserver for Counter Trigger
+    const impactSection = document.getElementById('impact');
+    if (impactSection) {
+      const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !countersStarted) {
+            countersStarted = true;
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+
+      statsObserver.observe(impactSection);
+    }
+
+    // ==========================================
+    // 4. SCROLL REVEAL ANIMATIONS
+    // ==========================================
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ==========================================
+    // 5. COURSE FILTERING AND SEARCH SYSTEM
+    // ==========================================
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const courseItems = document.querySelectorAll('.course-item');
+    const courseSearchInput = document.getElementById('courseSearch');
+    const noCoursesFound = document.getElementById('noCoursesFound');
+    let currentFilter = 'all';
+
+    function filterCourses() {
+      const searchQuery = (courseSearchInput.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+
+      courseItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        const itemKeywords = (item.getAttribute('data-keywords') || '').toLowerCase();
+        const itemTitle = (item.querySelector('.course-title')?.textContent || '').toLowerCase();
+        const itemDesc = (item.querySelector('.course-desc')?.textContent || '').toLowerCase();
+
+        const matchesCategory = (currentFilter === 'all' || itemCategory === currentFilter);
+        const matchesSearch = !searchQuery || 
+                              itemKeywords.includes(searchQuery) || 
+                              itemTitle.includes(searchQuery) || 
+                              itemDesc.includes(searchQuery);
+
+        if (matchesCategory && matchesSearch) {
+          item.style.display = 'block';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      if (visibleCount === 0) {
+        noCoursesFound.classList.remove('d-none');
+      } else {
+        noCoursesFound.classList.add('d-none');
+      }
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter');
+        filterCourses();
+      });
+    });
+
+    if (courseSearchInput) {
+      courseSearchInput.addEventListener('input', () => {
+        filterCourses();
+      });
+    }
+
+    function resetFilters() {
+      if (courseSearchInput) courseSearchInput.value = '';
+      currentFilter = 'all';
+      filterButtons.forEach(b => {
+        b.classList.remove('active');
+        if (b.getAttribute('data-filter') === 'all') b.classList.add('active');
+      });
+      filterCourses();
+    }
+
+    // ==========================================
+    // 6. COURSE DETAILS MODAL HANDLER
+    // ==========================================
+    const courseModalEl = document.getElementById('courseDetailsModal');
+    let courseModalInstance;
+
+    function openCourseModal(title, categoryName, trackName, syllabus, outcomes) {
+      if (!courseModalInstance) {
+        courseModalInstance = new bootstrap.Modal(courseModalEl);
+      }
+
+      document.getElementById('courseDetailsModalTitle').innerText = title;
+      document.getElementById('modalTrackBadge').innerText = categoryName;
+      document.getElementById('modalTrackCategory').innerText = trackName;
+      document.getElementById('modalTrackSyllabus').innerText = syllabus;
+      document.getElementById('modalTrackOutcomes').innerText = outcomes;
+
+      courseModalInstance.show();
+    }
+
+    // ==========================================
+    // 7. GALLERY LIGHTBOX MODAL HANDLER
+    // ==========================================
+    const lightboxModalEl = document.getElementById('galleryLightboxModal');
+    let lightboxInstance;
+
+    function openLightbox(imageSrc, captionText) {
+      if (!lightboxInstance) {
+        lightboxInstance = new bootstrap.Modal(lightboxModalEl);
+      }
+
+      const imgEl = document.getElementById('lightboxImage');
+      const captionEl = document.getElementById('lightboxCaption');
+
+      imgEl.src = imageSrc;
+      captionEl.innerText = captionText;
+
+      lightboxInstance.show();
+    }
+
+    // ==========================================
+    // 8. FRONTEND CONTACT FORM VALIDATION
+    // ==========================================
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const form = document.getElementById('titanContactForm');
+      const successAlert = document.getElementById('formSuccessAlert');
+
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        return;
+      }
+
+      // Show success demo alert
+      successAlert.classList.remove('d-none');
+      form.reset();
+      form.classList.remove('was-validated');
+
+      // Auto dismiss success note after 8 seconds
+      setTimeout(() => {
+        successAlert.classList.add('d-none');
+      }, 8000);
+    }
+
+    // Initialize Map and Page Systems on Window Load
+    window.addEventListener('DOMContentLoaded', () => {
+      resetMapView();
+    });
+  </script>
+</body>
+</html>
